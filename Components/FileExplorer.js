@@ -14,26 +14,7 @@ export default function FileExplorer() {
           style={styles.image}
           source={require('../assets/image/back_arrow_02.png')}
         />
-        <Text style={styles.headerText}> Select the Printer </Text>
-      </View>
-      <View style={styles.bluetooth}>
-        <View style = {styles.bluetoothText}>
-          <Image
-            style={styles.image}
-            source={require('../assets/image/bluetooth04.png')}
-          />
-          <Text> Bluetooth </Text>
-        </View>
-        <Switch
-          trackColor={{ false: "#767577", true: "#81b0ff" }}
-          thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-          ios_backgroundColor="#3e3e3e"
-          onValueChange={toggleSwitch}
-          value={isEnabled}
-        />
-      </View>
-      <View style = {styles.button}>
-        <Button title = 'O K'  style = {styles.button}/> 
+        <Text style={styles.headerText}> Select File to Print </Text>
       </View>
     </View>
   );
