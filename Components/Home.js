@@ -1,35 +1,43 @@
 import { Linking, StyleSheet, Text, View, StatusBar } from 'react-native';
 import { Button, Image } from 'react-native';
 import React, {useState} from 'react';
-import { Home } from './Home';
-import { selectPrinter } from './selectPrinter';
 
-import { Ionicons } from '@expo/vector-icons';
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import { NavigationContainer } from '@react-navigation/native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
-export default function Main() {
+export default function Home() {
   return (
     <View style={styles.container}>
-      <StatusBar animated={true} backgroundColor="#000" />
-      {/* Header */}
-      <View style={styles.headerBackground}>
-        <Text style={styles.headerText}> mPrint </Text>
+      {/* Select Printer */}
+      <View style={styles.selPrinter} >
+        <Image style = {styles.warningImage} source = {require('../assets/image/warning1.png')} />
+        <Text style = {styles.selPrinterText}> Select the Printer </Text>
       </View>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen  options={{ headerShown: false }}
-            name="Home"
-            component={Home}
-          />
-          <Stack.Screen  options={{ headerShown: false }}
-            name="selectPrinter"
-            component={selectPrinter}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <View style={styles.category}>
+        <Image
+          style={styles.image}
+          source={require('../assets/image/image.png')}
+        />
+        <Text> Image </Text>
+      </View>
+      <View style={styles.category}>
+        <Image
+          style={styles.image}
+          source={require('../assets/image/pdf.png')}
+        />
+        <Text> PDF </Text>
+      </View>
+      <View style={styles.category}>
+        <Image
+          style={styles.image}
+          source={require('../assets/image/txt-file-icon.png')}
+        />
+        <Text> Text </Text>
+      </View>
+      <View style={styles.category}>
+        <Image
+          style={styles.image}
+          source={require('../assets/image/repairing-service.png')}
+        />
+        <Text> Settings </Text>
+      </View>
     </View>
   );
 }
@@ -100,3 +108,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+
