@@ -34,7 +34,7 @@ export default function Preview() {
       </View>
       {/* Copies */}
 	  <View style={styles.copies}>
-		<Text> Copies: {copyNum} </Text>
+		<Text style = {styles.text}> Copies: {copyNum} </Text>
 		<View style = {styles.copyNumBtn}>
 			<TouchableHighlight
 			  activeOpacity={1}
@@ -65,19 +65,19 @@ export default function Preview() {
 				<Text style={styles.button}> Pick a file to print </Text>
 			</TouchableHighlight>
 		</View>
-		<Text>{ file }</Text>
+		<Text style = {styles.text}>{ file }</Text>
 	  <View style = {{position: 'absolute', bottom: 20}}>
 		<View style = {{flexDirection: 'row', margin: 5, justifyContent: 'space-between'}}>
 			<TouchableHighlight
 			  activeOpacity={0.6}
-			  underlayColor="#DDDDDD"
+			  underlayColor="#fff"
 			  style={styles.touchableHightlight}
 			  onPress={settings}>
 				<Text style={styles.button}> Settings </Text>
 			</TouchableHighlight>
 			<TouchableHighlight
 			  activeOpacity={0.6}
-			  underlayColor="#DDDDDD"
+			  underlayColor="#fff"
 			  style={styles.touchableHightlight}
 			  onPress={print}>
 				<Text style={styles.button}> Print </Text>
@@ -101,15 +101,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontStyle: 'bold',
   },
-  touchableHightlight: {
-	alignItems: 'center',
-	justifyContent: 'center',
-	backgroundColor: '#2196f3',
-	borderRadius: 3,
-	paddingVertical: 3,
-	paddingHorizontal: 10,
-	width: '45%',
-  },
   headerBackground: {
     width: '100%',
     height: 60,
@@ -118,6 +109,15 @@ const styles = StyleSheet.create({
     // justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  touchableHightlight: {
+	alignItems: 'center',
+	justifyContent: 'center',
+	backgroundColor: '#2196f3',
+	borderRadius: 3,
+	paddingVertical: 3,
+	paddingHorizontal: 10,
+	width: '45%',
   },
   copies: {
     width: '100%',
@@ -128,6 +128,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
 	paddingLeft: 20,
 	paddingRight: 20,
+  },
+  text: {
+    fontSize: 16,
   },
   copyNumBtn: {
     flexDirection: 'row',
@@ -143,8 +146,8 @@ const styles = StyleSheet.create({
     marginRight: 2,
   },
   copyNumChangeBtn: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 23,
     marginRight: 2,
   },
 });

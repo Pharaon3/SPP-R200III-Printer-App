@@ -1,12 +1,12 @@
 import { Linking, StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native';
 import React, {useState} from 'react';
-import Preview from './Components/Preview';
+import Setting from './Components/Setting';
 
 export default function App() {
   return (
     <View>
-      <Preview />
+      <Setting />
     </View>
   );
 }
