@@ -1,40 +1,39 @@
-import { Linking, StyleSheet, Text, View, StatusBar } from 'react-native';
-import { Button, Image } from 'react-native';
-import React, {useState} from 'react';
+import { Linking, StyleSheet, Text, View, StatusBar } from "react-native";
+import { Button, Image } from "react-native";
+import React, { useState } from "react";
 
 export default function PrintSettings() {
   return (
     <View style={styles.container}>
       {/* Select Printer */}
-      <View style={styles.selPrinter} >
-        <Image style = {styles.warningImage} source = {require('../assets/image/warning1.png')} />
-        <Text style = {styles.selPrinterText}> Settings </Text>
-      </View>
-      <View style={styles.category}>
+      <View style={styles.selPrinter}>
         <Image
-          style={styles.image}
-          source={require('../assets/image/image.png')}
+          style={styles.warningImage}
+          source={require("../assets/image/warning1.png")}
         />
-        <Text> Image </Text>
+        <Text style={styles.selPrinterText}> Settings </Text>
+      </View>
+      <View style={styles.category}>
+        <Text> Paper size: </Text>
       </View>
       <View style={styles.category}>
         <Image
           style={styles.image}
-          source={require('../assets/image/pdf.png')}
+          source={require("../assets/image/pdf.png")}
         />
         <Text> PDF </Text>
       </View>
       <View style={styles.category}>
         <Image
           style={styles.image}
-          source={require('../assets/image/txt-file-icon.png')}
+          source={require("../assets/image/txt-file-icon.png")}
         />
         <Text> Text </Text>
       </View>
       <View style={styles.category}>
         <Image
           style={styles.image}
-          source={require('../assets/image/repairing-service.png')}
+          source={require("../assets/image/repairing-service.png")}
         />
         <Text> Settings </Text>
       </View>
@@ -44,40 +43,40 @@ export default function PrintSettings() {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#fff",
+    alignItems: "center",
     // justifyContent: 'space-between',
   },
   text: {
-    color: '#000',
+    color: "#000",
     fontSize: 40,
-    fontStyle: 'italic',
+    fontStyle: "italic",
     margin: 10,
   },
   headerBackground: {
-    width: '100%',
+    width: "100%",
     height: 40,
-    backgroundColor: '#ee6809',
+    backgroundColor: "#ee6809",
     // alignItems: 'end',
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   headerText: {
-    color: 'white',
+    color: "white",
     fontSize: 16,
     marginLeft: 20,
   },
   category: {
     height: 100,
     // justifyContent: 'center',
-    width: '90%',
+    width: "90%",
     borderWidth: 2,
     borderRadius: 20,
-    borderColor: '#f55',
+    borderColor: "#f55",
     margin: 5,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     padding: 20,
   },
   image: {
@@ -87,15 +86,15 @@ const styles = StyleSheet.create({
   },
   selPrinter: {
     height: 40,
-    justifyContent: 'center',
-    width: '60%',
-    backgroundColor: '#ee6809',
+    justifyContent: "center",
+    width: "60%",
+    backgroundColor: "#ee6809",
     borderWidth: 1,
     borderRadius: 25,
-    borderColor: '#f55',
+    borderColor: "#f55",
     margin: 15,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     padding: 5,
   },
   warningImage: {
@@ -104,9 +103,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   selPrinterText: {
-    color: '#fff',
-    fontWeight: 'bold',
+    color: "#fff",
+    fontWeight: "bold",
   },
 });
-
-

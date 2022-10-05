@@ -51,10 +51,8 @@ export default function Setting() {
         <Text style={styles.headerText}> Select the Printer </Text>
       </View>
       {/* Header END */}
-
       <SafeAreaView style={styles.container}>
         <StatusBar animated={true} backgroundColor="#000" />
-
         <ScrollView>
           <View style={styles.body}>
             {/* Pagesize BEGINE */}
@@ -395,6 +393,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'space-between',
     flexDirection: "row",
     alignItems: "center",
+    // position: "absolute",
   },
   headerText: {
     color: "white",
